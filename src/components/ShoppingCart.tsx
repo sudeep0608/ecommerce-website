@@ -30,8 +30,8 @@ const ShoppingCart = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-background shadow-xl">
+    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm animate-fade-in">
+      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-background shadow-xl animate-slide-in-right">
         <Card className="h-full border-0 rounded-none">
           <CardHeader className="flex flex-row items-center justify-between border-b bg-gradient-surface">
             <CardTitle className="text-xl font-bold">
@@ -110,8 +110,8 @@ const ShoppingCart = ({
                             </Button>
                           </div>
                           
-                          <span className="font-semibold text-sm">
-                            ${(item.price * item.quantity).toFixed(2)}
+                          <span className="font-semibold text-sm bg-gradient-primary bg-clip-text text-transparent">
+                            ₹{(item.price * item.quantity).toLocaleString('en-IN')}
                           </span>
                         </div>
                       </div>
@@ -127,7 +127,7 @@ const ShoppingCart = ({
               <div className="w-full space-y-2">
                 <div className="flex justify-between text-sm">
                   <span>Subtotal ({totalItems} items)</span>
-                  <span>${totalPrice.toFixed(2)}</span>
+                  <span>₹{totalPrice.toLocaleString('en-IN')}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span>Shipping</span>
@@ -136,15 +136,15 @@ const ShoppingCart = ({
                 <Separator />
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total</span>
-                  <span>${totalPrice.toFixed(2)}</span>
+                  <span>₹{totalPrice.toLocaleString('en-IN')}</span>
                 </div>
               </div>
               
               <Button 
-                className="w-full bg-gradient-accent hover:opacity-90 text-accent-foreground shadow-button transition-smooth"
+                className="w-full bg-gradient-accent hover:opacity-90 hover:scale-105 text-accent-foreground shadow-glow transition-all duration-300 animate-bounce-in"
                 size="lg"
               >
-                Checkout
+                Checkout • ₹{totalPrice.toLocaleString('en-IN')}
               </Button>
             </CardFooter>
           )}

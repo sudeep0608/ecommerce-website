@@ -58,7 +58,13 @@ const Index = () => {
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-surface">
+    <div className="min-h-screen bg-gradient-hero relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-brand-secondary/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-brand-success/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
       <Header
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
@@ -66,13 +72,13 @@ const Index = () => {
         onCartClick={() => setIsCartOpen(true)}
       />
       
-      <main className="container mx-auto px-4 py-8">
-        <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            Premium Shirts & T-Shirts
+      <main className="container mx-auto px-4 py-8 relative z-10">
+        <div className="mb-8 text-center animate-fade-in">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent animate-bounce-in">
+            Premium Shirts & T-Shirts Collection
           </h2>
-          <p className="text-text-subtle max-w-2xl mx-auto">
-            Discover our collection of high-quality shirts and t-shirts. From professional dress shirts to comfortable casual wear, find your perfect style.
+          <p className="text-text-subtle max-w-2xl mx-auto text-lg">
+            Discover our exclusive collection of high-quality shirts and t-shirts. From professional dress shirts to comfortable casual wear, find your perfect style at unbeatable prices.
           </p>
         </div>
 

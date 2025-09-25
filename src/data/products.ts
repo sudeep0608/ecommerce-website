@@ -13,7 +13,7 @@ export const products: Product[] = [
   {
     id: '1',
     name: 'Classic White T-Shirt',
-    price: 29.99,
+    price: 2499,
     image: '/api/placeholder/300/400',
     category: 't-shirt',
     color: 'White',
@@ -23,7 +23,7 @@ export const products: Product[] = [
   {
     id: '2', 
     name: 'Navy Blue Dress Shirt',
-    price: 79.99,
+    price: 6599,
     image: '/api/placeholder/300/400',
     category: 'shirt',
     color: 'Navy Blue',
@@ -33,7 +33,7 @@ export const products: Product[] = [
   {
     id: '3',
     name: 'Black V-Neck T-Shirt',
-    price: 24.99,
+    price: 2099,
     image: '/api/placeholder/300/400',
     category: 't-shirt',
     color: 'Black',
@@ -43,7 +43,7 @@ export const products: Product[] = [
   {
     id: '4',
     name: 'Light Blue Casual Shirt',
-    price: 54.99,
+    price: 4599,
     image: '/api/placeholder/300/400',
     category: 'shirt',
     color: 'Light Blue',
@@ -53,7 +53,7 @@ export const products: Product[] = [
   {
     id: '5',
     name: 'Gray Crew Neck T-Shirt',
-    price: 22.99,
+    price: 1899,
     image: '/api/placeholder/300/400',
     category: 't-shirt',
     color: 'Gray',
@@ -63,7 +63,7 @@ export const products: Product[] = [
   {
     id: '6',
     name: 'White Button-Down Shirt',
-    price: 69.99,
+    price: 5799,
     image: '/api/placeholder/300/400',
     category: 'shirt',
     color: 'White',
@@ -73,7 +73,7 @@ export const products: Product[] = [
   {
     id: '7',
     name: 'Red Polo T-Shirt',
-    price: 39.99,
+    price: 3299,
     image: '/api/placeholder/300/400',
     category: 't-shirt',
     color: 'Red',
@@ -83,7 +83,7 @@ export const products: Product[] = [
   {
     id: '8',
     name: 'Striped Cotton Shirt',
-    price: 49.99,
+    price: 4199,
     image: '/api/placeholder/300/400',
     category: 'shirt',
     color: 'Blue/White',
